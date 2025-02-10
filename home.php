@@ -19,7 +19,8 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
-        <h3>WELCOME <?php  echo $_SESSION['user_full_name'] ; ?></h3>
+        <h3>WELCOME <?php if (isset($_SESSION['user_full_name']))
+         echo $_SESSION['user_full_name'] ; ?></h3>
         </nav>
         
     </header>
