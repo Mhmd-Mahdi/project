@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('food.jpg') no-repeat center center/cover; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+ 
+}
+nav {
+    background-color: #d0c0c500;
+    box-shadow: 0 2px 15px rgba(195, 188, 188, 0);
+    padding: 2em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+nav form {
+    display: flex;
+    flex-direction: column;
+}
+
+nav input {
+    padding: 1em;
+    margin: 10px 0;
+    border: 1px solid #956d6d;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+nav input:focus {
+    border-color: #95a7b4;
+    outline: none;
+}
+
+nav input[type="submit"] {
+    background-color: #5a87a2ef;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav input[type="submit"]:hover {
+    background-color: #2a3034e0;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    color: #8cb3e9;
+}
+
+
+.form-header {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.form-header h2 {
+    color: #7eaac7;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.form-header h3 {
+    font-size: 1.30em;
+    color: #ffffffa8;
+
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 340px;
+    
+}
+
+.login-link p {
+    font-size: 1.05em;
+    color: #e35757;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #b9a9e7;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .form-header h2 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        padding: 1.5em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 470px) {
+    nav {
+        padding: 1em;
+    }
+
+    .form-header h2 {
+        font-size: 1.3em;
+    }
+
+    .form-header p {
+        font-size: 1em;
+    }
+}
