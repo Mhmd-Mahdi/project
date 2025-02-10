@@ -216,8 +216,7 @@
                 <img src="recipe1.jpg" alt=" Beef Kebab">
                 <p> Beef Kebab</p>
             </a>
-        </div>
-<!-- Fish -->        
+        </div>     
         <div class="food-item">
             <a href="#modal" class="food-link">
                 <img src="recipe1.jpg" alt="Grilled Salmon">
@@ -267,7 +266,7 @@
             </a>
         </div>
 
-<!-- Pork -->         
+    <!--
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="BBQ Ribs">
@@ -316,7 +315,7 @@
         <p>Pork Schnitzel</p>
         </a>
     </div>
-<!-- Lamb -->     
+
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="Lamb Chops">
@@ -365,7 +364,7 @@
         <p>Lamb Curry</p>
         </a>
     </div>
-<!-- Vegetarian --> 
+
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="Veggie Burger">
@@ -414,7 +413,7 @@
         <p>Ratatouille</p>
         </a>
     </div>
-<!-- Vegan --> 
+
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="Vegan Burger">
@@ -463,7 +462,7 @@
         <p>Smoothie Bowls</p>
         </a>
     </div>
-<!-- Pasta --> 
+ 
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="Spaghetti Carbonara">
@@ -512,7 +511,6 @@
         <p>Baked Ziti</p>
         </a>
     </div>
-<!-- Rice -->
     <div class="food-item">
         <a href="#modal" class="food-link">
         <img src="recipe1.jpg" alt="Fried Rice">
@@ -561,6 +559,7 @@
         <p>Pilaf</p>
         </a>
     </div>
+-->
 <!-- Dessert -->
     <div class="food-item">
         <a href="#modal" class="food-link">
