@@ -1,4 +1,17 @@
-<?php session_start() ?>
+<?php 
+    session_start();
+    $db_server="localhost";
+    $db_user="root";
+    $db_pass="";
+    $db_name="users";
+    $conn="";
+
+    try {
+        $conn=mysqli_connect($db_server,$db_user,$db_pass,$db_name);
+    }catch(mysqli_sql_exception){
+        die("Can't Connect!.");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,21 +33,20 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
+    <?php if (isset($_SESSION["in"]) && $_SESSION["in"] == true) { ?>
+    <h3>WELCOME <?php echo htmlspecialchars($_SESSION['user_full_name']); ?></h3>
+    <?php }else{ ?>
         <div class="login">
             <a href="signin.php" class="btn sign-in">Sign In</a>
             <a href="login.php" class="btn log-in">Login</a>
-        </div>    
+        </div>   
+    <?php } ?>
         </nav>
     </header>
     <main>
         <h1>Welcome to our Recipe Collection</h1>
         <p>Discover delicious recipes that bring flavor and joy to your kitchen</p>
     </main>
-    
-
-   
-
-<!-- Search Box -->
 <div class="search-container">
 <form method="POST">
             <input type="text" name="search" placeholder="Type food name...">
@@ -42,7 +54,6 @@
         </form>
 </div>
 
-<!-- Category Circles -->
 <div class="categories">
     <div class="category active" onclick="filterCategory('all')">All</div>
     <div class="category" onclick="filterCategory('chicken')">Chicken</div>
@@ -50,9 +61,6 @@
     <div class="category" onclick="filterCategory('fish')">Fish</div>
     <div class="category" onclick="filterCategory('dessert')">Dessert</div>
 </div>
-
-<!-- Results -->
-<!-- Results -->
 <div id="food-list" class="food-container">
     <?php
     $foods = ["Crispy Chicken", "Fajitas", "Chicken Burger", "Grilled Chicken", "Chicken Curry", "Chicken Alfredo", "Chicken Wings", "Roast Chicken",
@@ -92,7 +100,7 @@
             }
         }
     } else {
-        // Only show all foods on initial page load
+        //Only show all foods on initial page load
         foreach ($foods as $food) {
             echo "<div class='food-item'>
                     <img src='recipe1.jpg' alt='" . htmlspecialchars($food) . "'>

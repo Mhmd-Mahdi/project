@@ -19,8 +19,19 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
-        <h3>WELCOME <?php if (isset($_SESSION['user_full_name']))
-         echo $_SESSION['user_full_name'] ; ?></h3>
+<?php    
+if (isset($_SESSION["in"]) && $_SESSION["in"] == true) {
+    if (isset($_SESSION['user_full_name'])) {
+        ?>
+        <h3>WELCOME <?php echo htmlspecialchars($_SESSION['user_full_name']); ?></h3>
+        <?php
+    } else {
+        die("User full name is not set in the session.");
+    }
+} else {
+    die("NOT LOGGED IN OR SIGNED UP.");
+}
+?>
         </nav>
         
     </header>

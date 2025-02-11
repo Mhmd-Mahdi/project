@@ -95,7 +95,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss",$user_input, $hash_password, $email);
     
     if ($stmt->execute()) {
-        header("location:home.php");    
+        $_SESSION["in"]=true;
+        header("location:home.php");
+        exit();
     } else {
         echo "<script>alert('Error: " . addslashes($stmt->error) . "');</script>";
     }

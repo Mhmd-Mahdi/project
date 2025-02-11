@@ -1,4 +1,4 @@
-<?php 
+    <?php 
     session_start();
     $db_server = "localhost";
     $db_user = "root";
