@@ -96,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($stmt->execute()) {
         $_SESSION["in"]=true;
+        $_SESSION["username"]= $user_input;
         header("location:home.php");
         exit();
     } else {
