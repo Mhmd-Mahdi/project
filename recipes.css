@@ -10,7 +10,7 @@ body {
     background-color: rgb(5, 7, 9);
     overflow-y: auto;  
     background-attachment: fixed; 
-    overflow: hidden;
+    overflow:auto;
 }
 
 header {
